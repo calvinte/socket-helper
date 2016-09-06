@@ -87,7 +87,3 @@ exports.Stream.prototype = {
     },
 };
 
-exports.compose = function composeMessage(prefix, obj) {
-    return prefix + JSON.stringify(obj);
-};
-
