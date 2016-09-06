@@ -35,8 +35,8 @@ myServiceStream.onClientClose(function(clientSocketIndex) {
     // Nice seeing you sucker.
 });
 myServiceStream.onValue(function(message) {
-    var messageString = message.parse(myServiceUsesJSON);
-    // or you could put them in a queue and mind your back-pressure...
+    var clientSocketIndex = message.clientSocketIndex; // Which client sent the message?
+    var messageString = message.parse(myServiceUsesJSON); // Consider putting them in a queue; mind your back-pressure...
 });
 ```
 
