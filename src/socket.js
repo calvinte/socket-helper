@@ -20,7 +20,8 @@ exports.checkStatus = function checkStatus(cb) {
     statusCheckStream.start();
 
     client.on('open', function() {
-        client.send(statusCheckStream.prefix + 'STATUSCHECK', function(err) {
+        var message = new Message('STATUSCHECK', statusCheckStream.prefix);
+        client.send(message.encode(), function(err) {
             if (err) {
                 cb(err);
                 return;

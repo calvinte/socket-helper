@@ -4,10 +4,13 @@ var StreamMgr = require('./stream');
 var SocketMgr = require('./socket');
 module.exports = function(message, streamPrefix, clientSocketIndex) {
     this.streamPrefix = streamPrefix;
-    this.clientSocketIndex = clientSocketIndex;
+    this.clientSocketIndex = clientSocketIndex || null;
     this.message = message;
 };
 module.exports.prototype = {
+    encode: function(isJson) {
+        return this.streamPrefix + (isJson ? JSON.stringify(this.message) : this.message);
+    },
     getStream: function() {
         return StreamMgr.streams[this.streamPrefix];
     },

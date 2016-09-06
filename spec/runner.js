@@ -47,5 +47,8 @@ describe('Socket Helper', function() {
             });
         });
     });
+
+    // @TODO message tests
+    // @TODO stream tests
 });
 
