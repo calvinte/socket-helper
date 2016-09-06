@@ -1,5 +1,6 @@
 {
   "name": "socket-helper",
+  "main": "index.js",
   "version": "0.0.0",
   "description": "Socket, streams and messages",
   "private": true,
