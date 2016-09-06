@@ -1,0 +1,16 @@
+{
+  "name": "socket-helper",
+  "version": "0.0.0",
+  "description": "Sockets streams and messages",
+  "private": true,
+  "dependencies": {
+    "baconjs": "0.7.85",
+    "ws": "1.1.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "3.0.2"
+  },
+  "engine": "node = 4.5.0"
+}
+
