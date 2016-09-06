@@ -1,10 +1,10 @@
 var assert = require('assert');
 var async = require('async');
 var _ = require('underscore');
-var WebSocket = require('ws');
 
-var Socket = require('../src/socket');
-var Stream = require('../src/stream');
+var SocketHelper = require('../index');
+var Socket = SocketHelper.Socket;
+var Stream = SocketHelper.Stream;
 
 describe('Socket Helper', function() {
     var server;

@@ -85,5 +85,12 @@ exports.Stream.prototype = {
 
         this.bus = new Bacon.Bus();
     },
+    onValue: function() {
+        if (!this.bus) {
+            return;
+        }
+
+        this.bus.onValue.apply(this.bus, arguments);
+    },
 };
 
