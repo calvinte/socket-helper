@@ -1,7 +1,7 @@
 {
   "name": "socket-helper",
   "version": "0.0.0",
-  "description": "Sockets streams and messages",
+  "description": "Socket, streams and messages",
   "private": true,
   "dependencies": {
     "baconjs": "0.7.85",
