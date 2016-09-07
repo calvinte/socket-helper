@@ -74,7 +74,9 @@ function handleClientClose(event) {
     }
 
     for (streamPrefix in socketStreamMap[clientSocketIndex]) {
-        StreamMgr.streams[streamPrefix].closeClient(clientSocketIndex);
+        if (StreamMgr.streams[streamPrefix]) {
+            StreamMgr.streams[streamPrefix].closeClient(clientSocketIndex);
+        }
     }
 
     socketStreamMap[clientSocketIndex] = null
