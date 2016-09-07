@@ -53,7 +53,7 @@ exports.Stream.prototype = {
             return;
         }
 
-        this.bus.error.apply(this.bus, arguments);
+        return this.bus.error.apply(this.bus, arguments);
     },
     offClientClose: function(fn) {
         var fnIdx = this.clientCloseListeners.indexOf(fn);
@@ -69,28 +69,28 @@ exports.Stream.prototype = {
             return;
         }
 
-        this.bus.plug.apply(this.bus, arguments);
+        return this.bus.plug.apply(this.bus, arguments);
     },
     push: function() {
         if (!this.bus) {
             return;
         }
 
-        this.bus.push.apply(this.bus, arguments);
+        return this.bus.push.apply(this.bus, arguments);
     },
     start: function() {
         if (this.bus) {
             return;
         }
 
-        this.bus = new Bacon.Bus();
+        return this.bus = new Bacon.Bus();
     },
     onValue: function() {
         if (!this.bus) {
             return;
         }
 
-        this.bus.onValue.apply(this.bus, arguments);
+        return this.bus.onValue.apply(this.bus, arguments);
     },
 };
 
