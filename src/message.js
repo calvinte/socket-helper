@@ -4,7 +4,7 @@ var StreamMgr = require('./stream');
 var SocketMgr = require('./socket');
 module.exports = function(message, streamPrefix, clientSocketIndex) {
     this.streamPrefix = streamPrefix;
-    this.clientSocketIndex = clientSocketIndex || null;
+    this.clientSocketIndex = clientSocketIndex;
     this.message = message;
 };
 module.exports.prototype = {
